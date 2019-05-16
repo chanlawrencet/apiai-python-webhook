@@ -3,6 +3,7 @@
 import urllib
 import json
 import os
+import datetime
 
 from flask import Flask
 from flask import request
@@ -20,8 +21,10 @@ def webhook():
     print(json.dumps(req, indent=4))
 
     print("now to process")
-    res = processRequest(req)
-
+    # res = processRequest(req)
+    res = {
+        "time" = datetime.datetime.now()
+    }
     res = json.dumps(res, indent=4)
     # print(res)
     r = make_response(res)
