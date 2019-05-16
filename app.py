@@ -23,7 +23,7 @@ def webhook():
     print("now to process")
     # res = processRequest(req)
     res = {
-        "time" = datetime.datetime.now()
+        "time" : datetime.datetime.now()
     }
     res = json.dumps(res, indent=4)
     # print(res)
