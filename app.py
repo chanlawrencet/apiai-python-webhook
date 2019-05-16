@@ -23,13 +23,13 @@ def webhook():
     print("now to process")
     # res = processRequest(req)
     res = {
-        "time" : datetime.datetime.now()
+        "fulfillmentText" : datetime.datetime.now()
     }
-    res = json.dumps(res, indent=4)
-    # print(res)
-    r = make_response(res)
-    r.headers['Content-Type'] = 'application/json'
-    return r
+    # res = json.dumps(res, indent=4)
+    # # print(res)
+    # # r = make_response(res)
+    # r.headers['Content-Type'] = 'application/json'
+    return res
 
 
 def processRequest(req):
